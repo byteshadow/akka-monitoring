@@ -65,10 +65,6 @@
       <Project>{e2933e70-d188-49af-a48b-22cf96a7cd00}</Project>
       <Name>Akka.Monitoring.ApplicationInsights</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Akka.Monitoring\Akka.Monitoring.csproj">
-      <Project>{34aacfdc-6eef-4a03-b510-b6b50c1646ab}</Project>
-      <Name>Akka.Monitoring</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

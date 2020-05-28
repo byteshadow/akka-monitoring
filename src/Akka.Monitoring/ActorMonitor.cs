@@ -27,16 +27,16 @@ namespace Akka.Monitoring
         /// <summary>
         /// Register a new <see cref="AbstractActorMonitoringClient"/> instance to use when monitoring Actor operations.
         /// </summary>
-        /// <returns>true if the monitor was succeessfully registered, false otherwise.</returns>
+        /// <returns>true if the monitor was successfully registered, false otherwise.</returns>
         public bool RegisterMonitor(AbstractActorMonitoringClient client)
         {
             return Registry.AddMonitor(client);
         }
 
         /// <summary>
-        /// Deregister an existing <see cref="AbstractActorMonitoringClient"/> instance so it no longer reports metrics to existing Actors.
+        /// De-register an existing <see cref="AbstractActorMonitoringClient"/> instance so it no longer reports metrics to existing Actors.
         /// </summary>
-        /// <returns>true if the monitor was succeessfully deregistered, false otherwise.</returns>
+        /// <returns>true if the monitor was successfully de-registered, false otherwise.</returns>
         public bool DeregisterMonitor(AbstractActorMonitoringClient client)
         {
             return Registry.RemoveMonitor(client);
@@ -125,7 +125,7 @@ namespace Akka.Monitoring
         }
 
         /// <summary>
-        /// Increment the "Deadletters" counter
+        /// Increment the "DeadLetters" counter
         /// </summary>
         /// <param name="context">The context of the actor making this call</param>
         /// <param name="value">The value of the counter. 1 by default.</param>

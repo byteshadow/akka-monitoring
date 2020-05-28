@@ -8,11 +8,19 @@ namespace Akka.Monitoring
     /// Logging implementation used to report key events, such as <see cref="DeadLetter"/> and <see cref="UnhandledMessage"/> instances
     /// back to an appropriate monitoring service
     /// </summary>
-    public class AkkaMonitoringLogger : TypedActor,
+    public class AkkaMonitoringLogger : ActorBase,
         IHandle<DeadLetter>, IHandle<UnhandledMessage>,
         IHandle<LogEvent>
     {
         public const string LoggerName = "AkkaMonitoringLogger";
+
+        protected override bool Receive(object message)
+        {
+            return message.Match()
+                .With<DeadLetter>(Handle)
+                .With<UnhandledMessage>(Handle)
+                .With<LogEvent>(Handle).WasHandled;
+        }
 
         protected override void PreStart()
         {

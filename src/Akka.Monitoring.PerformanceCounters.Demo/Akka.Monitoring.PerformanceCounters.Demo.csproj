@@ -64,10 +64,6 @@
       <Project>{d73890ef-d9cf-483e-bf7f-07c066621331}</Project>
       <Name>Akka.Monitoring.PerformanceCounters</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Akka.Monitoring\Akka.Monitoring.csproj">
-      <Project>{34aacfdc-6eef-4a03-b510-b6b50c1646ab}</Project>
-      <Name>Akka.Monitoring</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
